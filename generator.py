@@ -2,6 +2,8 @@ import random
 
 from graphviz import Digraph
 
+from interpreter import check
+
 
 class Node:
     def __init__(self, symbol, kind, color=None):
@@ -33,13 +35,14 @@ class Node:
             return f'print {self.children[0]};'
         elif self.kind == 'read':
             return f'{self.children[0]} = read;'
+        elif self.kind == 'number':
+            return self.symbol
         return
 
     def mutate(self):
         c = self.deepcopy()
         if random.random() < 0.8:
             mutation_point = c.get_random_node()
-            print(mutation_point)
             new_fragment = random_program(mutation_point.get_depth())
             if len(mutation_point.children) > 0:
                 mutation_point.children[0] = new_fragment
@@ -112,11 +115,12 @@ def random_tree(depth=5, choices=None):
     choice = random.choice(choices)
     if choice == 'block':
         node = Node('{', 'block')
-        for i in range(random.randint(2, 5)):
+        for i in range(random.randint(2, 10)):
             available_choices = ['read']
             if len(used_variables) > 0:
                 available_choices.append('assignment')
-                available_choices.append('print')
+                for _ in range(100):
+                    available_choices.append('print')
             if depth > 0 and len(used_variables) > 0:
                 available_choices.append('if')
                 available_choices.append('for')
@@ -160,8 +164,11 @@ def random_tree(depth=5, choices=None):
         return node
     elif choice == 'print':
         node = Node('print', 'print')
-        node.children.append(random_tree(depth - 1, ['variable']))
+        node.children.append(random_tree(depth - 1, ['variable', 'number', 'number', 'number', 'number', 'number', 'number']))
         return node
+    elif choice == 'number':
+        v = random.randint(-100, 100)
+        return Node(str(v), 'number')
     elif choice == 'read':
         node = Node('read', 'read')
         node.children.append(random_tree(depth - 1, ['new_variable']))
@@ -181,24 +188,14 @@ def crossover(tree1, tree2):
     copied_tree2 = tree2.deepcopy()
     crossover_point1 = copied_tree1.get_random_node()
     crossover_point2 = copied_tree2.get_random_node()
-    print(crossover_point1)
-    print(crossover_point2)
     subtree1 = crossover_point1.deepcopy()
     subtree2 = crossover_point2.deepcopy()
     crossover_point1.replace_subtree(subtree2)
     crossover_point2.replace_subtree(subtree1)
+
+    if check(str(copied_tree1)) and check(str(copied_tree2)):
+        return copied_tree1, copied_tree2
+
     return copied_tree1, copied_tree2
 
-
-p1 = random_program()
-# p2 = random_program()
-visualize(p1).render('p1', format='png')
-# visualize(p2).render('p2', format='png')
-# crossed1, crossed2 = crossover(p1, p2)
-
-# visualize(crossed1).render('cross', format='png')
-
-mutated = p1
-for i in range(10):
-    mutated = mutated.mutate()
-visualize(mutated).render('mutated', format='png')
+# print(random_program(3))

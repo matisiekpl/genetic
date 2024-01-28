@@ -1,0 +1,10 @@
+{
+	q = read;
+	print 71;
+	print 36;
+	print k;
+	print 91;
+	print 90;
+	print 28;
+	print 69;
+}

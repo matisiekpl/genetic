@@ -1,0 +1,11 @@
+{
+	y = read;
+	print 1;
+	print 77;
+	print 15;
+	print 82;
+	print 45;
+	print 58;
+	print 42;
+	print 7;
+}

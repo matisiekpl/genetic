@@ -1,0 +1,4 @@
+{
+	d = read;
+	print 1;
+}

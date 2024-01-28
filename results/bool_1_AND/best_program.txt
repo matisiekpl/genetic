@@ -1,0 +1,4 @@
+{
+	l = read;
+	print 0;
+}

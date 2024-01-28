@@ -1,0 +1,116 @@
+<html><head><title>Report</title><script src="https://cdn.tailwindcss.com"></script><meta charset="utf-8"></head><body><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h2 class="font-semibold text-lg">Genetic programming report</h2><br>Authors: <br>- Krzysztof Czechowicz<br>- Mateusz Woźniak<br></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h2 class="font-semibold text-lg">Grammar</h2><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>grammar gramatyka;
+
+// Following grammar reflects in some way Golang programming language. Reflected Golang features is
+// for example 'for' loop.
+main: (statement | NL*) (NL* statement)* NL*;
+statement:
+	printStatement ';'
+	| inputStatement ';'
+	| conditionalStatement
+	| loopStatement
+	| variableAssignmentStatement ';';
+name: STRING;
+printStatement: 'print ' (expression);
+inputStatement: 'read';
+conditionalStatement:
+	'if ' comparison codeBlock (' else ' codeBlock)?;
+loopStatement: 'for ' comparison codeBlock;
+variableAssignmentStatement:
+	name '=' (expression | inputStatement);
+comparison:
+	expression ('==' | '!=' | '<' | '>' | '<=' | '>=') expression
+	| notComparison
+	| comparison (' and ' | ' or ') comparison;
+
+notComparison: 'not' comparison;
+
+expression:
+	term
+	| expression ('+' | '-') expression
+	| inputStatement;
+
+term:
+	INTEGER
+	| name
+	| inputStatement
+	| '(' expression ')'
+	| term ('*' | '/') term;
+
+codeBlock: '{' NL* main NL* '}';
+
+INTEGER: '-'? [0-9]* '.'? [0-9]*;
+STRING: [a-zA-Z][a-zA-Z0-9_]*;
+NL: [\r\n]*;
+WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11a</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11a_fitness(input_array, y):
+        return 0 if 1 in y else 1000
+</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	o = read;
+	print 1;
+	print 22;
+	print 19;
+	print 74;
+}</pre></div><img src="results/11a/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11b</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11b_fitness(input_array, y):
+        return 0 if 789 in y else 1000
+</pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	q = read;
+	print 71;
+	print 36;
+	print k;
+	print 91;
+	print 90;
+	print 28;
+	print 69;
+}</pre></div><img src="results/11b/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11c</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11c_fitness(input_array, y):
+        return 0 if 31415 in y else 1000
+</pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	d = read;
+	print d;
+	print 72;
+	print 50;
+	print d;
+	print print d;;
+}</pre></div><img src="results/11c/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11d</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11d_fitness(input_array, y):
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == 1 else 1000
+</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	y = read;
+	print 1;
+	print 77;
+	print 15;
+	print 82;
+	print 45;
+	print 58;
+	print 42;
+	print 7;
+}</pre></div><img src="results/11d/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11e</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11e_fitness(input_array, y):
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == 789 else 1000
+</pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	print 2; = read;
+	print 47;
+	print k;
+	print 64;
+	print k;
+	print 97;
+}</pre></div><img src="results/11e/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11f</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11f_fitness(input_array, y):
+        if len(y) == 0:
+            return 1000
+        if len(y) > 1:
+            return len(y)
+        return 0 if y[0] == 1 else 1000
+</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	d = read;
+	print 1;
+}</pre></div><img src="results/11f/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_1_AND</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_1_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == 0 else 1000
+</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	l = read;
+	print 0;
+}</pre></div><img src="results/bool_1_AND/fitness.png" alt="fitness" class="mt-4"></div></body></html>

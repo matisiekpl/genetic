@@ -1,0 +1,8 @@
+{
+	d = read;
+	print d;
+	print 72;
+	print 50;
+	print d;
+	print print d;;
+}
