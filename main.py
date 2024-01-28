@@ -4,10 +4,11 @@ from graphviz import Digraph
 
 
 class Node:
-    def __init__(self, symbol, kind):
+    def __init__(self, symbol, kind, color=None):
         self.symbol = symbol
         self.kind = kind
         self.children = []
+        self.color = color
 
     def __str__(self):
         if self.kind == 'assignment':
@@ -30,7 +31,65 @@ class Node:
             return f'for {self.children[0]} {self.children[1]}'
         elif self.kind == 'print':
             return f'print {self.children[0]};'
+        elif self.kind == 'read':
+            return f'{self.children[0]} = read;'
         return
+
+    def mutate(self):
+        c = self.deepcopy()
+        if random.random() < 0.8:
+            mutation_point = c.get_random_node()
+            print(mutation_point)
+            new_fragment = random_program(mutation_point.get_depth())
+            if len(mutation_point.children) > 0:
+                mutation_point.children[0] = new_fragment
+        else:
+            c.remove_random_block_child()
+
+        return c
+
+    def get_all_block_nodes_at_any_depth(self):
+        block_nodes = []
+        if self.kind == 'block':
+            block_nodes.append(self)
+        for child in self.children:
+            block_nodes += child.get_all_block_nodes_at_any_depth()
+        return block_nodes
+
+    def remove_random_block_child(self):
+        block_nodes = self.get_all_block_nodes_at_any_depth()
+        if len(block_nodes) > 0:
+            block_node = random.choice(block_nodes)
+            if len(block_node.children) > 0:
+                block_node.children.remove(random.choice(block_node.children))
+
+    def get_depth(self):
+        if len(self.children) == 0:
+            return 1
+        else:
+            return 1 + max([child.get_depth() for child in self.children])
+
+    def get_random_node(self):
+        return random.choice(self.get_all_nodes_in_subtree())
+
+    def get_all_nodes_in_subtree(self):
+        nodes = [self]
+        for child in self.children:
+            nodes += child.get_all_nodes_in_subtree()
+        return nodes
+
+    def replace_subtree(self, new_subtree):
+        self.symbol = new_subtree.symbol
+        self.kind = new_subtree.kind
+        self.children = new_subtree.children
+
+    def deepcopy(self):
+        # Create a new node with the same symbol, kind, and color
+        new_node = Node(self.symbol, self.kind, self.color)
+        # Recursively copy all children
+        for child in self.children:
+            new_node.children.append(child.deepcopy())
+        return new_node
 
 
 def visualize(node, graph=None):
@@ -43,18 +102,24 @@ def visualize(node, graph=None):
     return graph
 
 
-def random_tree(depth=10, choices=None, used_variables=None):
+used_variables = []
+
+
+def random_tree(depth=5, choices=None):
+    global used_variables
     if choices is None:
         choices = ['block']
     choice = random.choice(choices)
     if choice == 'block':
         node = Node('{', 'block')
-
-        available_choices = ['assignment', 'print'] * 4
-        if depth > 0:
-            available_choices.append('if')
-            available_choices.append('for')
-        for i in range(random.randint(1, 5)):
+        for i in range(random.randint(2, 5)):
+            available_choices = ['read']
+            if len(used_variables) > 0:
+                available_choices.append('assignment')
+                available_choices.append('print')
+            if depth > 0 and len(used_variables) > 0:
+                available_choices.append('if')
+                available_choices.append('for')
             node.children.append(random_tree(depth - 1, available_choices))
         return node
     elif choice == 'if':
@@ -71,6 +136,8 @@ def random_tree(depth=10, choices=None, used_variables=None):
         node = Node('=', 'assignment')
         node.children.append(random_tree(depth - 1, ['variable']))
         node.children.append(random_tree(depth - 1, ['expression']))
+        if node.children[1].symbol == 'read':
+            used_variables.append(node.children[0].symbol)
         return node
     elif choice == 'expression':
         node = Node(random.choice(['+', '-', '*', '/']), 'expression')
@@ -78,7 +145,13 @@ def random_tree(depth=10, choices=None, used_variables=None):
         node.children.append(random_tree(depth - 1, ['variable']))
         return node
     elif choice == 'variable':
-        v = random.choice(['i', 'j', 'k', 'l', 'm', 'n', 'read'])
+        v = random.choice(used_variables)
+        return Node(v, 'variable')
+    elif choice == 'new_variable':
+        v = chr(random.randint(97, 122))
+        while v in used_variables:
+            v = chr(random.randint(97, 122))
+        used_variables.append(v)
         return Node(v, 'variable')
     elif choice == 'comparison':
         node = Node(random.choice(['>', '<', '==', '!=', '>=', '<=']), 'comparison')
@@ -89,8 +162,43 @@ def random_tree(depth=10, choices=None, used_variables=None):
         node = Node('print', 'print')
         node.children.append(random_tree(depth - 1, ['variable']))
         return node
+    elif choice == 'read':
+        node = Node('read', 'read')
+        node.children.append(random_tree(depth - 1, ['new_variable']))
+        return node
 
 
-p = random_tree()
-print(p)
-visualize(p).render('gout', view=True, format='png')
+def random_program(depth=3):
+    global used_variables
+    used_variables = []
+    return random_tree(depth)
+
+
+def crossover(tree1, tree2):
+    if not tree1.children or not tree2.children:
+        return None, None
+    copied_tree1 = tree1.deepcopy()
+    copied_tree2 = tree2.deepcopy()
+    crossover_point1 = copied_tree1.get_random_node()
+    crossover_point2 = copied_tree2.get_random_node()
+    print(crossover_point1)
+    print(crossover_point2)
+    subtree1 = crossover_point1.deepcopy()
+    subtree2 = crossover_point2.deepcopy()
+    crossover_point1.replace_subtree(subtree2)
+    crossover_point2.replace_subtree(subtree1)
+    return copied_tree1, copied_tree2
+
+
+p1 = random_program()
+# p2 = random_program()
+visualize(p1).render('p1', format='png')
+# visualize(p2).render('p2', format='png')
+# crossed1, crossed2 = crossover(p1, p2)
+
+# visualize(crossed1).render('cross', format='png')
+
+mutated = p1
+for i in range(10):
+    mutated = mutated.mutate()
+visualize(mutated).render('mutated', format='png')
