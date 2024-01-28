@@ -1,4 +1,0 @@
-{
-	j = read;
-	o = read;
-}

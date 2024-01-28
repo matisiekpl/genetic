@@ -1,11 +1,5 @@
 {
-	j = read;
-	print 19;
-	print 12;
-	print j;
-	print 5;
-	print 0;
-	print 0;
-	a = read;
-	print 14;
+	k = read;
+	print 4;
+	print 13;
 }

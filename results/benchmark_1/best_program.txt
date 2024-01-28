@@ -1,4 +1,0 @@
-{
-	q = read;
-	print 3;
-}

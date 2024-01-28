@@ -1,5 +1,9 @@
 {
 	r = read;
-	n = read;
-	print 10;
+	print 18;
+	print 1;
+	print 20;
+	print 7;
+	print 11;
+	l = read;
 }

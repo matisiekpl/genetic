@@ -198,5 +198,3 @@ def crossover(tree1, tree2):
         return copied_tree1, copied_tree2
 
     return crossover(tree1, tree2)
-
-# print(random_program(3))

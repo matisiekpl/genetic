@@ -62,8 +62,9 @@ class Generation:
 
         if not os.path.exists(f'results/{self.label}'):
             os.makedirs(f'results/{self.label}')
-        with open(f'results/{self.label}/best_program.txt', 'w') as f:
-            f.write(self.population[self.best_fitness_index].code())
+        if interpreter.check(self.population[self.best_fitness_index].code()):
+            with open(f'results/{self.label}/best_program.txt', 'w') as f:
+                f.write(self.population[self.best_fitness_index].code())
 
         return self.best_fitness, self.average_fitness
 
@@ -156,8 +157,8 @@ def simulate(label, input_set, F, population_count=1000, generations_count=100):
         return 99999
 
 
-POP = 1
-GEN = 1
+POP = 1000
+GEN = 30
 
 
 # 1.1.A Program powinien wygenerować na wyjściu (na dowolnej pozycji w danych wyjściowych) liczbę 1.

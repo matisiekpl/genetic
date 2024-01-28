@@ -1,6 +1,0 @@
-{
-	x = read;
-	print 8;
-	print 3;
-	print x;
-}

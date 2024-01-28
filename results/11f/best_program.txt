@@ -1,9 +1,4 @@
 {
-	n = read;
-	print 13;
-	r = read;
-	print -1;
-	n = n / r;
-	print -1;
-	print 12;
+	g = read;
+	print 1;
 }
