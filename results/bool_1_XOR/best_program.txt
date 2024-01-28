@@ -1,0 +1,20 @@
+{
+	n = read;
+	d = read;
+	for d < d {
+	print d;
+	for n == n {
+	print 20;
+	print 0;
+	print 16;
+}
+	print 7;
+	print -2;
+	n = n - n;
+	print 7;
+	print 14;
+	print 17;
+	print -1;
+}
+	print 12;
+}

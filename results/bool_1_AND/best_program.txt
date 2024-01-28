@@ -1,4 +1,18 @@
 {
-	l = read;
-	print 0;
+	i = read;
+	if i == i {
+	print 14;
+	print 19;
+	print i;
+}
+	print 6;
+	for i != i {
+	k = read;
+	print 12;
+	print 11;
+	print 15;
+}
+	print 8;
+	print 3;
+	print 15;
 }

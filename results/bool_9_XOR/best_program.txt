@@ -1,0 +1,42 @@
+{
+	f = read;
+	print f;
+	print 7;
+	l = read;
+	print 11;
+	for l <= l {
+	print 10;
+	print 15;
+	for l != l {
+	print 8;
+	i = read;
+}
+	i = f - l;
+	print -1;
+	print 7;
+	print 13;
+	print -1;
+	if i == l {
+	print 16;
+	print 11;
+	print 13;
+	print 5;
+	c = read;
+	print 15;
+	print 11;
+	print 2;
+	print 2;
+}
+}
+	print f;
+	for f != i {
+	print 17;
+	print 0;
+	print 11;
+	n = read;
+	print 16;
+	s = read;
+}
+	print 10;
+	g = read;
+}

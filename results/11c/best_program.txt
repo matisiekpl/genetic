@@ -1,8 +1,37 @@
 {
-	d = read;
-	print d;
-	print 72;
-	print 50;
-	print d;
-	print print d;;
+	l = read;
+	print 0;
+	for l != l {
+	print -1;
+	print 18;
+	if l >= l {
+	for l > l {
+	print 10;
+	print 4;
+	print 8;
+	print 14;
+	print l;
+}
+	l = l * l;
+	print -1;
+	if l < l {
+	print l;
+	print -2;
+	print 7;
+	print 15;
+	print 14;
+	print 9;
+}
+	print 7;
+	print -1;
+	print 7;
+}
+	print 6;
+	print l;
+	l = l - l;
+	print 11;
+	print 13;
+	print 2;
+	print l;
+}
 }

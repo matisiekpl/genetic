@@ -1,0 +1,56 @@
+{
+	s = read;
+	if s <= s {
+	print 2;
+	print 4;
+	for s >= s {
+	print s;
+	for s == s {
+	print -1;
+	print s;
+	s = s + s;
+	print 4;
+	print 14;
+	print 4;
+}
+	print s;
+	print 17;
+	print -2;
+	print 13;
+	g = read;
+	h = read;
+}
+	print 18;
+	print 4;
+	print h;
+}
+	j = read;
+	k = read;
+	if k > g {
+	if g < g {
+	print h;
+	print k;
+	print k;
+	print 11;
+	print 5;
+}
+	print 15;
+	print 5;
+	print 5;
+	print 5;
+	print s;
+	print g;
+	print -2;
+	for g == k {
+	print -1;
+	print 8;
+	print 18;
+	print 2;
+}
+}
+	g = k * k;
+	print 1;
+	print 11;
+	print 0;
+	print 2;
+}

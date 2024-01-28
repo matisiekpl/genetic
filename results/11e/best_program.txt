@@ -1,8 +1,6 @@
 {
-	print 2; = read;
-	print 47;
-	print k;
-	print 64;
-	print k;
-	print 97;
+	n = read;
+	print n;
+	print n;
+	print 15;
 }

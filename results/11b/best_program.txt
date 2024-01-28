@@ -1,10 +1,17 @@
 {
-	q = read;
-	print 71;
-	print 36;
-	print k;
-	print 91;
-	print 90;
-	print 28;
-	print 69;
+	m = read;
+	if m == m {
+	print 0;
+	f = read;
+	print m;
+	print 12;
+	print 8;
+	print 17;
+	print 6;
+}
+	z = read;
+	print 2;
+	print z;
+	print 7;
+	print 0;
 }

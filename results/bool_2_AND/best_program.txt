@@ -1,0 +1,121 @@
+{
+	f = read;
+	print 18;
+	print 6;
+	for f < f {
+	print 0;
+	if f >= f {
+	print f;
+	c = read;
+	print 7;
+	print 11;
+	c = c - f;
+	for c <= f {
+	print c;
+	print 14;
+	print 7;
+	print c;
+	print c;
+	print 1;
+	print 12;
+	print 0;
+	print 0;
+}
+	print 7;
+	print c;
+	if c >= f {
+	f = f + c;
+	print c;
+	c = c * f;
+	y = read;
+	print 17;
+	q = read;
+	print 14;
+	print 19;
+	print 1;
+}
+}
+	x = read;
+}
+	print 19;
+	c = y + f;
+	for x < q {
+	if x == q {
+	print 20;
+	if x != f {
+	print c;
+	print 18;
+	print 3;
+	print q;
+	print 6;
+	print 13;
+}
+	print 14;
+	print y;
+}
+	if x == y {
+	for f > f {
+	r = read;
+	print c;
+	print 4;
+	print 9;
+	print 19;
+	print r;
+	print 2;
+	print 18;
+	print 4;
+	n = read;
+}
+	print 10;
+	q = n / n;
+	print 8;
+	print 4;
+	f = q + n;
+}
+	if q <= n {
+	print n;
+	print 8;
+	k = read;
+	print 9;
+	print 6;
+	print 2;
+	print 0;
+	print -2;
+}
+	print 11;
+	if c != x {
+	n = n - y;
+	if y == y {
+	a = read;
+	print 3;
+	print 5;
+	w = read;
+	t = read;
+}
+	print 3;
+	for x != c {
+	e = read;
+	print -1;
+	print 7;
+	print q;
+	print 0;
+	print 7;
+}
+	print -2;
+	print -2;
+	l = read;
+	print 1;
+	print 5;
+}
+	print 6;
+	g = read;
+	print 3;
+	print 4;
+}
+	for r < l {
+	print 15;
+	print 3;
+	print 6;
+	print t;
+}
+}

@@ -1,0 +1,37 @@
+{
+	a = read;
+	print 14;
+	print 16;
+	t = read;
+	e = read;
+	for e < t {
+	print 3;
+	print a;
+	w = read;
+}
+	print 8;
+	print w;
+	for e != a {
+	f = read;
+	print 3;
+	if t != f {
+	print 11;
+	print 17;
+	print 3;
+	for a < w {
+	print 7;
+	print 16;
+	print -2;
+	print 2;
+	print 5;
+	l = read;
+	print a;
+	print a;
+	print -1;
+}
+	print 0;
+	print 2;
+}
+}
+	print 17;
+}

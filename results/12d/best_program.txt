@@ -1,0 +1,14 @@
+{
+	g = read;
+	for g != g {
+	w = read;
+	print 20;
+	print -2;
+	w = w - w;
+	print 15;
+	print 0;
+	print w;
+	v = read;
+}
+	print 0;
+}

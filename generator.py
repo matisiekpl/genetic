@@ -119,7 +119,7 @@ def random_tree(depth=5, choices=None):
             available_choices = ['read']
             if len(used_variables) > 0:
                 available_choices.append('assignment')
-                for _ in range(100):
+                for _ in range(10):
                     available_choices.append('print')
             if depth > 0 and len(used_variables) > 0:
                 available_choices.append('if')
@@ -164,10 +164,11 @@ def random_tree(depth=5, choices=None):
         return node
     elif choice == 'print':
         node = Node('print', 'print')
-        node.children.append(random_tree(depth - 1, ['variable', 'number', 'number', 'number', 'number', 'number', 'number']))
+        node.children.append(
+            random_tree(depth - 1, ['variable', 'number', 'number', 'number', 'number', 'number', 'number']))
         return node
     elif choice == 'number':
-        v = random.randint(-100, 100)
+        v = random.randint(-2, 20)
         return Node(str(v), 'number')
     elif choice == 'read':
         node = Node('read', 'read')
@@ -175,7 +176,7 @@ def random_tree(depth=5, choices=None):
         return node
 
 
-def random_program(depth=3):
+def random_program(depth=5):
     global used_variables
     used_variables = []
     return random_tree(depth)
@@ -193,9 +194,9 @@ def crossover(tree1, tree2):
     crossover_point1.replace_subtree(subtree2)
     crossover_point2.replace_subtree(subtree1)
 
-    if check(str(copied_tree1)) and check(str(copied_tree2)):
+    if check(str(copied_tree1)):
         return copied_tree1, copied_tree2
 
-    return copied_tree1, copied_tree2
+    return crossover(tree1, tree2)
 
 # print(random_program(3))

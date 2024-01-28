@@ -1,7 +1,5 @@
 {
-	o = read;
-	print 1;
-	print 22;
-	print 19;
-	print 74;
+	r = read;
+	n = read;
+	print 10;
 }

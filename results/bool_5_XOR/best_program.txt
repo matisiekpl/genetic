@@ -1,0 +1,53 @@
+{
+	j = read;
+	if j != j {
+	print 20;
+	print 0;
+	print 19;
+	j = j + j;
+	print 20;
+	print 1;
+}
+	print -1;
+	print 14;
+	if j > j {
+	print 6;
+	e = read;
+	if j <= j {
+	print e;
+	f = read;
+	print j;
+	r = read;
+	for r < r {
+	print j;
+	print 13;
+	f = r - j;
+	z = read;
+	g = read;
+	print 13;
+}
+	print 8;
+	print e;
+	print g;
+	print j;
+}
+	print 1;
+	r = f / z;
+	print j;
+	print 17;
+	print 10;
+	print 10;
+	if z < f {
+	print 15;
+	for g <= z {
+	z = f * e;
+	print 14;
+	print 7;
+}
+}
+}
+	print -1;
+	print 2;
+	print 4;
+	o = read;
+}

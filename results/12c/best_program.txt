@@ -1,0 +1,35 @@
+{
+	j = read;
+	if j >= j {
+	if j > j {
+	j = j / j;
+	print j;
+}
+	print 15;
+	print 18;
+}
+	print -1;
+	print j;
+	print 19;
+	if j >= j {
+	print 1;
+	print 1;
+}
+	print j;
+	print 18;
+	j = j + j;
+	for j != j {
+	print 5;
+	print 3;
+	print 14;
+	if j <= j {
+	j = j / j;
+	print 11;
+	print j;
+}
+	print j;
+	print 4;
+	print 3;
+	print 19;
+}
+}

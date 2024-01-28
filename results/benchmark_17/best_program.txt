@@ -1,0 +1,25 @@
+{
+	h = read;
+	print 13;
+	for h <= h {
+	print 6;
+	print 11;
+	print 4;
+	h = h - h;
+	print 15;
+	print -2;
+	print 11;
+	if h == h {
+	print 5;
+	print 20;
+	print h;
+	print 20;
+	print 16;
+	print 16;
+}
+	print h;
+}
+	print 20;
+	print 5;
+	print 13;
+}

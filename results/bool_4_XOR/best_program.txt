@@ -1,0 +1,44 @@
+{
+	n = read;
+	for n == n {
+	print n;
+	print 13;
+	print -2;
+	print 6;
+	print n;
+	e = read;
+	print 17;
+}
+	if n > n {
+	e = n * n;
+	print 12;
+	print 10;
+	print 6;
+	print e;
+	print 16;
+	print 7;
+	print 18;
+}
+	print 2;
+	print 15;
+	if n <= n {
+	if n == e {
+	print 6;
+	print 6;
+	print n;
+	print -1;
+}
+	print 11;
+}
+	print 1;
+	print 19;
+	print 9;
+	for e != n {
+	print 11;
+	print 10;
+	print 15;
+	print 17;
+	print 18;
+	e = n * e;
+}
+}

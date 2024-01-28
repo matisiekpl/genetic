@@ -1,0 +1,24 @@
+{
+	p = read;
+	print 16;
+	for p != p {
+	print 20;
+	if p > p {
+	print 1;
+	print 6;
+	print 9;
+}
+	print 20;
+	print 15;
+	print 1;
+	print 20;
+	print 7;
+	print 16;
+	print 10;
+	print 5;
+}
+	print 11;
+	print 0;
+	print 0;
+	print 0;
+}

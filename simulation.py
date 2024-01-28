@@ -63,7 +63,6 @@ class Generation:
         if not os.path.exists(f'results/{self.label}'):
             os.makedirs(f'results/{self.label}')
         with open(f'results/{self.label}/best_program.txt', 'w') as f:
-            # print(self.population[self.best_fitness_index].code())
             f.write(self.population[self.best_fitness_index].code())
 
         return self.best_fitness, self.average_fitness
@@ -153,13 +152,12 @@ def simulate(label, input_set, F, population_count=1000, generations_count=100):
         plt.savefig(f'results/{label}/fitness.png')
         return best_fitness
     except Exception as e:
-        raise e
         print(e)
         return 99999
 
 
-POP = 1000
-GEN = 3
+POP = 1
+GEN = 1
 
 
 # 1.1.A Program powinien wygenerować na wyjściu (na dowolnej pozycji w danych wyjściowych) liczbę 1.
@@ -401,11 +399,12 @@ def test_bool_1_OR():
             return len(y)
         if len(y) == 0:
             return 1000
+        print(input_array, y)
 
         return 0 if y[0] == input_array[0] else 1000
 
     fitness_function = inspect.getsource(test_bool_1_OR_fitness)
-    return fitness_function, simulate('bool_1_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(100)],
+    return fitness_function, simulate('bool_1_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
                                       test_bool_1_OR_fitness, POP, GEN)
 
 
@@ -421,7 +420,7 @@ def test_bool_1_XOR():
         return 0 if y[0] == input_array[0] else 1000
 
     fitness_function = inspect.getsource(test_bool_1_XOR_fitness)
-    return fitness_function, simulate('bool_1_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(100)],
+    return fitness_function, simulate('bool_1_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
                                       test_bool_1_XOR_fitness, POP, GEN)
 
 
@@ -437,7 +436,7 @@ def test_bool_2_AND():
         return 0 if y[0] == input_array[0] and y[1] == input_array[1] else 1000
 
     fitness_function = inspect.getsource(test_bool_2_AND_fitness)
-    return fitness_function, simulate('bool_2_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(100)],
+    return fitness_function, simulate('bool_2_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
                                       test_bool_2_AND_fitness, POP, GEN)
 
 
@@ -453,7 +452,7 @@ def test_bool_2_OR():
         return 0 if y[0] == input_array[0] or y[1] == input_array[1] else 1000
 
     fitness_function = inspect.getsource(test_bool_2_OR_fitness)
-    return fitness_function, simulate('bool_2_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(100)],
+    return fitness_function, simulate('bool_2_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
                                       test_bool_2_OR_fitness, POP, GEN)
 
 
@@ -471,32 +470,496 @@ def test_bool_2_XOR():
         return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] else 1000
 
     fitness_function = inspect.getsource(test_bool_2_XOR_fitness)
-    return fitness_function, simulate('bool_2_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(100)],
+    return fitness_function, simulate('bool_2_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
                                       test_bool_2_XOR_fitness, POP, GEN)
 
 
+def test_bool_3_AND():
+    k = 3
+
+    def test_bool_3_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] else 1000
+
+    fitness_function = inspect.getsource(test_bool_3_AND_fitness)
+    return fitness_function, simulate('bool_3_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_3_AND_fitness, POP, GEN)
+
+
+def test_bool_3_OR():
+    k = 3
+
+    def test_bool_3_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] else 1000
+
+    fitness_function = inspect.getsource(test_bool_3_OR_fitness)
+    return fitness_function, simulate('bool_3_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_3_OR_fitness, POP, GEN)
+
+
+def test_bool_3_XOR():
+    k = 3
+
+    def test_bool_3_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] else 1000
+
+    fitness_function = inspect.getsource(test_bool_3_XOR_fitness)
+    return fitness_function, simulate('bool_3_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_3_XOR_fitness, POP, GEN)
+
+
+def test_bool_4_AND():
+    k = 4
+
+    def test_bool_4_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] else 1000
+
+    fitness_function = inspect.getsource(test_bool_4_AND_fitness)
+    return fitness_function, simulate('bool_4_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_4_AND_fitness, POP, GEN)
+
+
+def test_bool_4_OR():
+    k = 4
+
+    def test_bool_4_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] else 1000
+
+    fitness_function = inspect.getsource(test_bool_4_OR_fitness)
+    return fitness_function, simulate('bool_4_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_4_OR_fitness, POP, GEN)
+
+
+def test_bool_4_XOR():
+    k = 4
+
+    def test_bool_4_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[
+            3] else 1000
+
+    fitness_function = inspect.getsource(test_bool_4_XOR_fitness)
+    return fitness_function, simulate('bool_4_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_4_XOR_fitness, POP, GEN)
+
+
+def test_bool_5_AND():
+    k = 5
+
+    def test_bool_5_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] else 1000
+
+    fitness_function = inspect.getsource(test_bool_5_AND_fitness)
+    return fitness_function, simulate('bool_5_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_5_AND_fitness, POP, GEN)
+
+
+def test_bool_5_OR():
+    k = 5
+
+    def test_bool_5_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] else 1000
+
+    fitness_function = inspect.getsource(test_bool_5_OR_fitness)
+    return fitness_function, simulate('bool_5_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_5_OR_fitness, POP, GEN)
+
+
+def test_bool_5_XOR():
+    k = 5
+
+    def test_bool_5_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[3] ^ \
+                    y[4] == input_array[4] else 1000
+
+    fitness_function = inspect.getsource(test_bool_5_XOR_fitness)
+    return fitness_function, simulate('bool_5_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_5_XOR_fitness, POP, GEN)
+
+
+def test_bool_6_AND():
+    k = 6
+
+    def test_bool_6_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] else 1000
+
+    fitness_function = inspect.getsource(test_bool_6_AND_fitness)
+    return fitness_function, simulate('bool_6_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_6_AND_fitness, POP, GEN)
+
+
+def test_bool_6_OR():
+    k = 6
+
+    def test_bool_6_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] or y[5] == input_array[5] else 1000
+
+    fitness_function = inspect.getsource(test_bool_6_OR_fitness)
+    return fitness_function, simulate('bool_6_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_6_OR_fitness, POP, GEN)
+
+
+def test_bool_6_XOR():
+    k = 6
+
+    def test_bool_6_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[3] ^ \
+                    y[4] == input_array[4] ^ y[5] == input_array[5] else 1000
+
+    fitness_function = inspect.getsource(test_bool_6_XOR_fitness)
+    return fitness_function, simulate('bool_6_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_6_XOR_fitness, POP, GEN)
+
+
+def test_bool_7_AND():
+    k = 7
+
+    def test_bool_7_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[
+                        6] else 1000
+
+    fitness_function = inspect.getsource(test_bool_7_AND_fitness)
+    return fitness_function, simulate('bool_7_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_7_AND_fitness, POP, GEN)
+
+
+def test_bool_7_OR():
+    k = 7
+
+    def test_bool_7_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] or y[5] == input_array[5] or y[6] == input_array[6] else 1000
+
+    fitness_function = inspect.getsource(test_bool_7_OR_fitness)
+    return fitness_function, simulate('bool_7_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_7_OR_fitness, POP, GEN)
+
+
+def test_bool_7_XOR():
+    k = 7
+
+    def test_bool_7_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[3] ^ \
+                    y[4] == input_array[4] ^ y[5] == input_array[5] ^ y[6] == input_array[6] else 1000
+
+    fitness_function = inspect.getsource(test_bool_7_XOR_fitness)
+    return fitness_function, simulate('bool_7_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_7_XOR_fitness, POP, GEN)
+
+
+def test_bool_8_AND():
+    k = 8
+
+    def test_bool_8_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] else 1000
+
+    fitness_function = inspect.getsource(test_bool_8_AND_fitness)
+    return fitness_function, simulate('bool_8_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_8_AND_fitness, POP, GEN)
+
+
+def test_bool_8_OR():
+    k = 8
+
+    def test_bool_8_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] or y[5] == input_array[5] or y[6] == input_array[6] or y[7] == input_array[
+                        7] else 1000
+
+    fitness_function = inspect.getsource(test_bool_8_OR_fitness)
+    return fitness_function, simulate('bool_8_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_8_OR_fitness, POP, GEN)
+
+
+def test_bool_8_XOR():
+    k = 8
+
+    def test_bool_8_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[3] ^ \
+                    y[4] == input_array[4] ^ y[5] == input_array[5] ^ y[6] == input_array[6] ^ y[7] == input_array[
+                        7] else 1000
+
+    fitness_function = inspect.getsource(test_bool_8_XOR_fitness)
+    return fitness_function, simulate('bool_8_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_8_XOR_fitness, POP, GEN)
+
+
+def test_bool_9_AND():
+    k = 9
+
+    def test_bool_9_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] and y[8] == input_array[8] else 1000
+
+    fitness_function = inspect.getsource(test_bool_9_AND_fitness)
+    return fitness_function, simulate('bool_9_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_9_AND_fitness, POP, GEN)
+
+
+def test_bool_9_OR():
+    k = 9
+
+    def test_bool_9_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] or y[5] == input_array[5] or y[6] == input_array[6] or y[7] == input_array[
+                        7] or y[8] == input_array[8] else 1000
+
+    fitness_function = inspect.getsource(test_bool_9_OR_fitness)
+    return fitness_function, simulate('bool_9_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_9_OR_fitness, POP, GEN)
+
+
+def test_bool_9_XOR():
+    k = 9
+
+    def test_bool_9_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[3] ^ \
+                    y[4] == input_array[4] ^ y[5] == input_array[5] ^ y[6] == input_array[6] ^ y[7] == input_array[7] ^ \
+                    y[8] == input_array[8] else 1000
+
+    fitness_function = inspect.getsource(test_bool_9_XOR_fitness)
+    return fitness_function, simulate('bool_9_XOR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_9_XOR_fitness, POP, GEN)
+
+
+def test_bool_10_AND():
+    k = 10
+
+    def test_bool_10_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] and y[8] == input_array[8] and y[9] == input_array[9] else 1000
+
+    fitness_function = inspect.getsource(test_bool_10_AND_fitness)
+    return fitness_function, simulate('bool_10_AND', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_10_AND_fitness, POP, GEN)
+
+
+def test_bool_10_OR():
+    k = 10
+
+    def test_bool_10_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] or y[3] == input_array[
+            3] or y[4] == input_array[4] or y[5] == input_array[5] or y[6] == input_array[6] or y[7] == input_array[
+                        7] or y[8] == input_array[8] or y[9] == input_array[9] else 1000
+
+    fitness_function = inspect.getsource(test_bool_10_OR_fitness)
+    return fitness_function, simulate('bool_10_OR', [[random.randint(0, 1) for _ in range(k)] for i in range(10)],
+                                      test_bool_10_OR_fitness, POP, GEN)
+
+
+def benchmark_1():
+    def benchmark_1_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] + input_array[1] else 1000
+
+    fitness_function = inspect.getsource(benchmark_1_fitness)
+    return fitness_function, simulate('benchmark_1', [[random.randint(0, 100) for _ in range(2)] for i in range(10)],
+                                      benchmark_1_fitness, POP, GEN)
+
+
+# given integer n, return the sum of squaring each integer from 1 to n
+def benchmark_17():
+    def benchmark_17_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == sum([i ** 2 for i in range(1, input_array[0] + 1)]) else 1000
+
+    fitness_function = inspect.getsource(benchmark_17_fitness)
+    return fitness_function, simulate('benchmark_17', [[random.randint(0, 100) for _ in range(1)] for i in range(10)],
+                                      benchmark_17_fitness, POP, GEN)
+
+
+# given 3 integers, print their median
+def benchmark_27():
+    def benchmark_27_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == sorted(input_array)[1] else 1000
+
+    fitness_function = inspect.getsource(benchmark_27_fitness)
+    return fitness_function, simulate('benchmark_27', [[random.randint(0, 100) for _ in range(3)] for i in range(10)],
+                                      benchmark_27_fitness, POP, GEN)
+
+
 tests = [
-    # ('11a', test_11a),
-    # ('11b', test_11b),
-    # ('11c', test_11c),
-    # ('11d', test_11d),
-    # ('11e', test_11e),
-    # ('11f', test_11f),
-    # ('12b', test_12b),
-    # ('12a', test_12a),
-    # ('12c', test_12c),
-    # ('12d', test_12d),
-    # ('12e', test_12e),
-    # ('13a', test_13a),
-    # ('13b', test_13b),
-    # ('14a', test_14a),
-    # ('14b', test_14b),
-    # ('bool_1_AND', test_bool_1_AND),
+    ('11a', test_11a),
+    ('11b', test_11b),
+    ('11c', test_11c),
+    ('11d', test_11d),
+    ('11e', test_11e),
+    ('11f', test_11f),
+    ('12b', test_12b),
+    ('12a', test_12a),
+    ('12c', test_12c),
+    ('12d', test_12d),
+    ('12e', test_12e),
+    ('13a', test_13a),
+    ('13b', test_13b),
+    ('14a', test_14a),
+    ('14b', test_14b),
+    ('bool_1_AND', test_bool_1_AND),
     ('bool_1_OR', test_bool_1_OR),
-    # ('bool_1_XOR', test_bool_1_XOR),
-    # ('bool_2_AND', test_bool_2_AND),
-    # ('bool_2_OR', test_bool_2_OR),
-    # ('bool_2_XOR', test_bool_2_XOR),
+    ('bool_1_XOR', test_bool_1_XOR),
+    ('bool_2_AND', test_bool_2_AND),
+    ('bool_2_OR', test_bool_2_OR),
+    ('bool_2_XOR', test_bool_2_XOR),
+    ('bool_3_AND', test_bool_3_AND),
+    ('bool_3_OR', test_bool_3_OR),
+    ('bool_3_XOR', test_bool_3_XOR),
+    ('bool_4_AND', test_bool_4_AND),
+    ('bool_4_OR', test_bool_4_OR),
+    ('bool_4_XOR', test_bool_4_XOR),
+    ('bool_5_AND', test_bool_5_AND),
+    ('bool_5_OR', test_bool_5_OR),
+    ('bool_5_XOR', test_bool_5_XOR),
+    ('bool_6_AND', test_bool_6_AND),
+    ('bool_6_OR', test_bool_6_OR),
+    ('bool_6_XOR', test_bool_6_XOR),
+    ('bool_7_AND', test_bool_7_AND),
+    ('bool_7_OR', test_bool_7_OR),
+    ('bool_7_XOR', test_bool_7_XOR),
+    ('bool_8_AND', test_bool_8_AND),
+    ('bool_8_OR', test_bool_8_OR),
+    ('bool_8_XOR', test_bool_8_XOR),
+    ('bool_9_AND', test_bool_9_AND),
+    ('bool_9_OR', test_bool_9_OR),
+    ('bool_9_XOR', test_bool_9_XOR),
+    ('bool_10_AND', test_bool_10_AND),
+    ('bool_10_OR', test_bool_10_OR),
+    ('benchmark_1', benchmark_1),
+    ('benchmark_17', benchmark_17),
+    ('benchmark_27', benchmark_27),
 ]
 
 

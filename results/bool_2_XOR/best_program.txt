@@ -1,0 +1,11 @@
+{
+	g = read;
+	print 13;
+	print 19;
+	print 5;
+	for g != g {
+	print g;
+	print 19;
+	print g;
+}
+}

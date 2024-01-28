@@ -1,0 +1,11 @@
+{
+	j = read;
+	for j > j {
+	print 10;
+	print 1;
+	print j;
+	print 17;
+	print 11;
+	e = read;
+}
+}

@@ -1,0 +1,18 @@
+{
+	p = read;
+	if p < p {
+	print 16;
+	print 3;
+	print 12;
+	p = p - p;
+	print p;
+	t = read;
+	t = t + p;
+	print 2;
+	print 2;
+}
+	print 9;
+	print p;
+	y = read;
+	c = read;
+}

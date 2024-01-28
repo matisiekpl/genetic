@@ -1,0 +1,12 @@
+{
+	t = read;
+	print 12;
+	print 8;
+	t = t * t;
+	print 15;
+	print 13;
+	print 10;
+	t = t * t;
+	j = read;
+	print 8;
+}
