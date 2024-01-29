@@ -188,7 +188,6 @@ def check(program):
     parser.addErrorListener(error_listener)
     try:
         parser.main()
-        print(valid)
         if not valid:
             return False
         return True
