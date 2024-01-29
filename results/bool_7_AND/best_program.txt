@@ -1,0 +1,11 @@
+{
+	z = read;
+	if z < z {
+	print -2;
+	print z;
+	print 19;
+	print 20;
+}
+	a = read;
+	print 17;
+}

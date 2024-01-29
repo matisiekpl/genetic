@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import generator
 import interpreter
 
-POP = 100
+POP = 10
 GEN = 2
 
 
@@ -161,7 +161,6 @@ def simulate(label, input_set, F, population_count=1000, generations_count=100):
         plt.savefig(f'results/{label}/fitness.png')
         return best_fitness
     except Exception as e:
-        raise e
         print(e)
         return 99999
 
@@ -405,7 +404,6 @@ def test_bool_1_OR():
             return len(y)
         if len(y) == 0:
             return 1000
-        print(input_array, y)
 
         return 0 if y[0] == input_array[0] else 1000
 
@@ -434,7 +432,7 @@ def test_bool_2_AND():
     k = 2
 
     def test_bool_2_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -450,7 +448,7 @@ def test_bool_2_OR():
     k = 2
 
     def test_bool_2_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -466,7 +464,7 @@ def test_bool_2_XOR():
     k = 2
 
     def test_bool_2_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -484,7 +482,7 @@ def test_bool_3_AND():
     k = 3
 
     def test_bool_3_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -500,7 +498,7 @@ def test_bool_3_OR():
     k = 3
 
     def test_bool_3_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -516,7 +514,7 @@ def test_bool_3_XOR():
     k = 3
 
     def test_bool_3_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -534,7 +532,7 @@ def test_bool_4_AND():
     k = 4
 
     def test_bool_4_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -551,7 +549,7 @@ def test_bool_4_OR():
     k = 4
 
     def test_bool_4_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -568,7 +566,7 @@ def test_bool_4_XOR():
     k = 4
 
     def test_bool_4_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -587,7 +585,7 @@ def test_bool_5_AND():
     k = 5
 
     def test_bool_5_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -604,7 +602,7 @@ def test_bool_5_OR():
     k = 5
 
     def test_bool_5_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -621,7 +619,7 @@ def test_bool_5_XOR():
     k = 5
 
     def test_bool_5_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -640,7 +638,7 @@ def test_bool_6_AND():
     k = 6
 
     def test_bool_6_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -656,7 +654,7 @@ def test_bool_6_OR():
     k = 6
 
     def test_bool_6_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -672,7 +670,7 @@ def test_bool_6_XOR():
     k = 6
 
     def test_bool_6_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -690,7 +688,7 @@ def test_bool_7_AND():
     k = 7
 
     def test_bool_7_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -707,7 +705,7 @@ def test_bool_7_OR():
     k = 7
 
     def test_bool_7_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -723,7 +721,7 @@ def test_bool_7_XOR():
     k = 7
 
     def test_bool_7_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -741,7 +739,7 @@ def test_bool_8_AND():
     k = 8
 
     def test_bool_8_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -758,7 +756,7 @@ def test_bool_8_OR():
     k = 8
 
     def test_bool_8_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -775,7 +773,7 @@ def test_bool_8_XOR():
     k = 8
 
     def test_bool_8_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -794,7 +792,7 @@ def test_bool_9_AND():
     k = 9
 
     def test_bool_9_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 1000
@@ -811,7 +809,7 @@ def test_bool_9_OR():
     k = 9
 
     def test_bool_9_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 100
@@ -828,7 +826,7 @@ def test_bool_9_XOR():
     k = 9
 
     def test_bool_9_XOR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 1:
             return 1000
@@ -847,7 +845,7 @@ def test_bool_10_AND():
     k = 10
 
     def test_bool_10_AND_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 100
@@ -864,7 +862,7 @@ def test_bool_10_OR():
     k = 10
 
     def test_bool_10_OR_fitness(input_array, y):
-        if len(y) > 1:
+        if len(y) > k:
             return len(y)
         if len(y) == 0:
             return 100

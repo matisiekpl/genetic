@@ -41,169 +41,156 @@ codeBlock: '{' NL* main NL* '}';
 INTEGER: '-'? [0-9]* '.'? [0-9]*;
 STRING: [a-zA-Z][a-zA-Z0-9_]*;
 NL: [\r\n]*;
-WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11a</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11a_fitness(input_array, y):
+WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11a</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11a_fitness(input_array, y):
         return 0 if 1 in y else 1000
-</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	a = read;
-	print 16;
-	print 19;
-	print 8;
+</pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	s = read;
 	print 3;
+	print 14;
+	print s;
+	print s;
+	print 20;
 	print 0;
-	print 3;
-	print 17;
-	print 1;
+	print 12;
+	print 12;
 }</pre></div><img src="results/11a/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11b</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11b_fitness(input_array, y):
         return 0 if 789 in y else 1000
 </pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	r = read;
-	print 15;
-	print 0;
-	print 8;
-	print 15;
-	print print p;;
-	print r;
+	o = read;
+	print 10;
+	print 4;
+	b = read;
+	print b;
+	if o >= o print 11;
 }</pre></div><img src="results/11b/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11c</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11c_fitness(input_array, y):
         return 0 if 31415 in y else 1000
 </pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	x = read;
-	f = read;
-	print 20;
+	print 6;
+	print -2;
+	print 17;
+	print e;
+	print 10;
 }</pre></div><img src="results/11c/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11d</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11d_fitness(input_array, y):
         if len(y) == 0:
             return 1000
         return 0 if y[0] == 1 else 1000
 </pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	p = read;
-	print 7;
-	print 3;
-	print 6;
-	print p;
-	print p;
-	p = p / p;
+	g = read;
 	print {
-	v = read;
-	l = read;
-	print 10;
-	print 17;
-	print 11;
-	print v;
-	print 13;
+	j = read;
+	print 3;
+	print 1;
+	for j > j {
+	print 0;
 	print 15;
-};
-	print 20;
+	j = j + j;
 	print 19;
+	print 17;
+	print 18;
+	print 1;
+}
+	print 17;
+	print 19;
+	for j != j {
+	print 4;
+	print 9;
+}
+	print 15;
+	print 10;
+};
+	a = read;
+	print 13;
+	a = g / a;
 }</pre></div><img src="results/11d/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11e</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11e_fitness(input_array, y):
         if len(y) == 0:
             return 1000
         return 0 if y[0] == 789 else 1000
 </pre></div><h4>Best fitness: 2000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	m = read;
-	if m >= m {
-	print 11;
-	for m == m {
-	print 16;
-	print -1;
-	print 20;
-	print m;
-	6 = m - m;
-}
-	if m < m {
-	print m;
-	if m == m {
-	print 10;
-	print 14;
-	print 20;
-	print m;
-}
-	print 19;
-	print 5;
-	print 1;
-	print 4;
-	print 9;
-	p = read;
-	print 6;
-	print 17;
-}
-	print 6;
-}
-	print 7;
-	if p >= m {
-	for p < p {
-	m = p / m;
-	print 1;
-	z = read;
-	s = read;
-	print -1;
-	if z > s {
-	print 18;
-	b = read;
-	print 1;
-	print z;
-	print 16;
-	print 5;
-	print 10;
-	print 5;
-}
-	print 18;
-	c = read;
-	print 13;
-	print 19;
-}
-	print -1;
-	o = read;
-	for c < b {
-	print 3;
 	r = read;
-	print 15;
-	print 1;
-	print 2;
-	print 10;
-	print 18;
-	e = read;
-	print 12;
-	print 20;
-}
-	print 20;
-	print 15;
-	print 4;
+	for r <= r {
+	z = read;
 	for z <= z {
-	for o < b {
-	print 10;
-	print 15;
-	print z;
-	print 7;
-	print 13;
-}
-	print 3;
-	print r;
-	if e > r {
-	print 0;
-	print 1;
 	print 4;
-	print 3;
-	print 11;
-}
+	if z == z {
+	print z;
+	print 16;
+	print 6;
+	print 4;
+	x = read;
+	print -2;
 	print 12;
 }
-	print 16;
-	print 17;
 }
-	print 0;
-	d = read;
+	for z <= z {
+	print 9;
+	for z <= x {
+	print 14;
+	w = read;
+	print 18;
+	print 8;
+	print 19;
+	q = read;
 	print 10;
+	w = x + z;
+	19
+	print 6;
+}
+	print 10;
+	for w != x {
+	print 17;
+	print 15;
+	r = x / r;
+}
+	if x < x {
+	print 13;
 	print 20;
-}</pre></div><img src="results/11e/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11f</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11f_fitness(input_array, y):
+}
+	print 12;
+	print 10;
+	print 4;
+}
+	j = read;
+	print 4;
+}
+	print 8;
+	print 1;
+	print 10;
+	if r <= r {
+	w = z - j;
+	print 14;
+	print 8;
+	if w > z {
+	w = j - x;
+	for q == x {
+	print 15;
+	print 5;
+	print 12;
+	print z;
+	print 14;
+	v = read;
+	print 19;
+	print 9;
+	print 4;
+}
+}
+	print 4;
+	print q;
+	o = read;
+	print 11;
+	print 16;
+}
+	print v;
+	print 18;
+	print 9;
+}</pre></div><img src="results/11e/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 11f</h1><h4 class="text-green-500">Problem solved!</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_11f_fitness(input_array, y):
         if len(y) == 0:
             return 1000
         if len(y) > 1:
             return len(y)
         return 0 if y[0] == 1 else 1000
-</pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	p = read;
-	print 5;
-	k = read;
-	print 17;
+</pre></div><h4>Best fitness: 0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	l = read;
+	print 1;
 }</pre></div><img src="results/11f/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 12a</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_12a_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -211,10 +198,12 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
             return 1000
         s = input_array[0] + input_array[1]
         return abs(s - y[0])
-</pre></div><h4>Best fitness: 10</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	u = read;
-	print 2;
-	print 15;
+</pre></div><h4>Best fitness: 15</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	v = read;
+	print d;
+	print 3;
+	print 20;
+	c = read;
 }</pre></div><img src="results/12a/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 12b</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_12b_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -223,8 +212,8 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
         s = input_array[0] + input_array[1]
         return abs(s - y[0])
 </pre></div><h4>Best fitness: 4.0</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	e = read;
-	print 5;
+	n = read;
+	print 3;
 }</pre></div><img src="results/12b/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 12c</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_12c_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -233,9 +222,9 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
         s = input_array[0] + input_array[1]
         return abs(s - y[0])
 </pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	c = read;
-	print -1;
-	print 9;
+	l = read;
+	print 15;
+	print 6;
 }</pre></div><img src="results/12c/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 12d</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_12d_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -243,10 +232,15 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
             return 1000
         s = input_array[0] - input_array[1]
         return abs(s - y[0])
-</pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	c = read;
-	print 11;
-	print 8;
+</pre></div><h4>Best fitness: 9999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	q = read;
+	print -1;
+	9
+	print 20;
+	print 3;
+	print 5;
+	print 6;
+	print 16;
 }</pre></div><img src="results/12d/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 12e</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_12e_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -255,9 +249,11 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
         s = input_array[0] * input_array[1]
         return abs(s - y[0])
 </pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	v = read;
-	print 19;
-	print 3;
+	k = read;
+	print 9;
+	print print 7;;
+	x = read;
+	print 17;
 }</pre></div><img src="results/12e/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 13a</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_13a_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -268,9 +264,9 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
         else:
             return 0 if y[0] == input_array[1] else 1000
 </pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	i = read;
-	print 9;
-	print 12;
+	q = read;
+	print 14;
+	print 5;
 }</pre></div><img src="results/13a/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 13b</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_13b_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -280,10 +276,14 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
             return 0 if y[0] == input_array[0] else 1000
         else:
             return 0 if y[0] == input_array[1] else 1000
-</pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
-	y = read;
-	print 17;
-	print -1;
+</pre></div><h4>Best fitness: 6</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	u = read;
+	print 10;
+	print 12;
+	print print 16;;
+	v = read;
+	print -2;
+	print 2;
 }</pre></div><img src="results/13b/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 14a</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_14a_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -293,9 +293,10 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
         avg = sum(input_array) / len(input_array)
         return abs(avg - y[0])
 </pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	e = read;
+	print 15;
 	i = read;
-	print 13;
-	print 11;
+	print 7;
 }</pre></div><img src="results/14a/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: 14b</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_14b_fitness(input_array, y):
         if len(y) > 1:
             return len(y)
@@ -304,19 +305,461 @@ WS: [ \t]+ -> skip;</pre></div></div><div class="p-4 m-4 border border-gray-400 
 
         avg = sum(input_array[1:]) / len(input_array[1:])
         return abs(avg - y[0])
-</pre></div><h4>Best fitness: 8</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+</pre></div><h4>Best fitness: 4</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	print -1;
+	print 15;
+}</pre></div><img src="results/14b/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: benchmark_1</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def benchmark_1_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] + input_array[1] else 1000
+</pre></div><h4>Best fitness: 10000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	s = read;
+	for s > s {
+	print 9;
+	print 20;
+	e = read;
+	print 17;
+	print 15;
+	print 2;
+	print 16;
+	s = e * e;
+	q = read;
+}
+	for q < s {
+	print 19;
+	if s == q {
+	print 10;
+	x = read;
+}
+}
+}</pre></div><img src="results/benchmark_1/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: benchmark_17</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def benchmark_17_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == sum([i ** 2 for i in range(1, input_array[0] + 1)]) else 1000
+</pre></div><h4>Best fitness: 200</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	b = read;
+	print 3;
+	print 13;
+}</pre></div><img src="results/benchmark_17/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_10_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_10_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 100
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] and y[8] == input_array[8] and y[9] == input_array[9] else 1000
+</pre></div><h4>Best fitness: 10000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	i = read;
+	print 16;
+	g = read;
+	print 17;
+	print 6;
+	i = g / g;
+	for i < i {
+	print 5;
+	if i < g {
+	print 8;
+	for g <= g {
+	print 5;
+	g = i * g;
+	print 18;
+	k = read;
+	a = read;
+	print 17;
+	print 13;
+}
+	print 18;
+	print 14;
+	print 8;
+	print 2;
+	for k == k {
+	a = i - k;
+	print 6;
+	print 15;
+	print 8;
+	print k;
+}
+	f = read;
+	print 10;
+	for a == f {
+	print 18;
+	print f;
+	print -2;
+	print 0;
+	print 13;
+	print 16;
+	print f;
+	print g;
+}
+}
+	print 18;
+}
+	print 4;
+	for f < f {
+	print 2;
+	e = read;
+	print 20;
+	for i >= g {
 	{
+	u = read;
+	print u;
+	print 7;
+}
+	print 6;
+	print -1;
+	d = read;
+}
+	g = g * k;
+	print -1;
+	print 4;
+}
+	print -1;
+}</pre></div><img src="results/bool_10_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_1_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_1_AND_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == 0 else 1000
+</pre></div><h4>Best fitness: 200</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	r = read;
+	print 8;
+	print -1;
+}</pre></div><img src="results/bool_1_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_1_OR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_1_OR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] else 1000
+</pre></div><h4>Best fitness: 200</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	j = read;
+	print 0;
+	print 20;
+}</pre></div><img src="results/bool_1_OR/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_1_XOR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_1_XOR_fitness(input_array, y):
+        if len(y) > 1:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] else 1000
+</pre></div><h4>Best fitness: 500</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	h = read;
+	print 4;
+	print 2;
+	print 12;
+	print -1;
+	print 7;
+}</pre></div><img src="results/bool_1_XOR/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_2_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_2_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] else 1000
+</pre></div><h4>Best fitness: 400</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	m = read;
+	print -2;
+	print -2;
+	print 19;
+	print 1;
+}</pre></div><img src="results/bool_2_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_2_OR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_2_OR_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] else 1000
+</pre></div><h4>Best fitness: 99999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	q = read;
+	print 4;
+	d = read;
+	print 12;
+	d = q - d;
+}</pre></div></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_2_XOR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_2_XOR_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] else 1000
+</pre></div><h4>Best fitness: 99999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	a = read;
+	print 19;
+	print 6;
+	print 11;
+	print 7;
+	print 12;
+	print 15;
+	a = w;
+	print -1;
+}</pre></div><img src="results/bool_2_XOR/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_3_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_3_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] else 1000
+</pre></div><h4>Best fitness: 99999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	{
+	r = read;
+	print r;
+	print -1;
+	print 4;
+	print 18;
+	print 12;
+	for r >= r {
+	f = read;
+	print 12;
+	t = read;
+	print 8;
+	for t < r {
+	print 18;
+	w = read;
+	print 11;
+	print 6;
+	p = read;
+	print w;
+	print 20;
+}
+	print 2;
+	print 6;
+	print 5;
+}
+	print f;
+	print 15;
+}
+	print 20;
+}</pre></div><img src="results/bool_3_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_3_OR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_3_OR_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] or y[1] == input_array[1] or y[2] == input_array[2] else 1000
+</pre></div><h4>Best fitness: 100000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	h = read;
+	h = h + h;
+	print h;
+	h = h + h;
+	print 0;
+	print h;
+	i = read;
+	a = read;
+}</pre></div><img src="results/bool_3_OR/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_3_XOR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_3_XOR_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] else 1000
+</pre></div><h4>Best fitness: 500</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	x = read;
+	print 18;
+	print 13;
+	f = read;
+	if v < l {
+	print 3;
+	print 20;
+	print 20;
+	print -1;
+	print 16;
+	print -2;
+	if l != l {
+	print 11;
+	print 19;
+	print l;
+	print l;
+	print 12;
+	print 3;
+	print 3;
+	print 16;
+	k = read;
+}
+	print 13;
+	print -2;
+	print -1;
+}
+	print 10;
+	print 3;
+	print 14;
+}</pre></div><img src="results/bool_3_XOR/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_4_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_4_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] else 1000
+</pre></div><h4>Best fitness: 800</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	g = read;
+	print 0;
+	print 13;
+	print 20;
+	print 11;
+	print 11;
+	print 10;
+	print 6;
+	print 13;
+}</pre></div><img src="results/bool_4_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_4_XOR</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_4_XOR_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 1:
+            return 1000
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] ^ y[1] == input_array[1] ^ y[2] == input_array[2] ^ y[3] == input_array[
+            3] else 1000
+</pre></div><h4>Best fitness: 99999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	k = read;
+	print 9;
+	print 0;
+	print 11;
+	for k >= k {
+	print 4;
+	for k <= k {
+	print 9;
+	print 8;
+	print k;
+	print 10;
+	print 7;
+	print 7;
+	print 9;
+	print 11;
+}
+	print k;
+}
+}</pre></div></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_5_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_5_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] else 1000
+</pre></div><h4>Best fitness: 700</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	o = read;
+	print 2;
+	print 13;
+	print 7;
+	print 0;
+	print 3;
+	print 15;
+	print 14;
+}</pre></div><img src="results/bool_5_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_6_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_6_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] else 1000
+</pre></div><h4>Best fitness: 700</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
 	q = read;
 	print 7;
-	print 15;
-	q = q / q;
-	q = q - q;
-	print q;
-	print 0;
-	print 14;
-	print 14;
-	print q;
-} = read;
-	print z;
+	print 10;
+	print 1;
+	print 13;
+	print 13;
+	print 5;
+	print print 20;;
+	y = read;
+	print -2;
+}</pre></div><img src="results/bool_6_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_7_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_7_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[
+                        6] else 1000
+</pre></div><h4>Best fitness: 100000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	m = read;
+	print 7;
 	print 2;
-}</pre></div><img src="results/14b/fitness.png" alt="fitness" class="mt-4"></div></body></html>
+	print 14;
+	print -1;
+}</pre></div><img src="results/bool_7_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_8_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_8_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] else 1000
+</pre></div><h4>Best fitness: 100000</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	{
+	z = read;
+	print 5;
+	print 5;
+	print z;
+	for z != z {
+	print 3;
+	print 13;
+}
+	print 9;
+	z = z / z;
+	print 4;
+	z = z + z;
+	print 16;
+} = read;
+	print w;
+	print 8;
+	for w >= w {
+	if w != w {
+	print w;
+	w = w * w;
+	w = w * w;
+	for w < w {
+	print 15;
+	print w;
+	print 11;
+	w = w - w;
+	print 3;
+	print 9;
+	print 7;
+	print 20;
+	print -1;
+}
+	print 17;
+}
+	print 14;
+	print 1;
+	print -2;
+	print 17;
+	v = read;
+	print 17;
+}
+	print 17;
+	print v;
+	print w;
+	for w >= w {
+	print 13;
+	f = read;
+	print -2;
+	print 13;
+	print 20;
+	w = w / w;
+	print 13;
+	e = read;
+}
+}</pre></div><img src="results/bool_8_AND/fitness.png" alt="fitness" class="mt-4"></div><div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg"><h1 class="font-semibold text-lg">Test: bool_9_AND</h1><h4 class="text-red-500">Problem not solved.</h4><h4>Fitness function:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>    def test_bool_9_AND_fitness(input_array, y):
+        if len(y) > k:
+            return len(y)
+        if len(y) == 0:
+            return 1000
+        return 0 if y[0] == input_array[0] and y[1] == input_array[1] and y[2] == input_array[2] and y[3] == \
+                    input_array[3] and y[4] == input_array[4] and y[5] == input_array[5] and y[6] == input_array[6] and \
+                    y[7] == input_array[7] and y[8] == input_array[8] else 1000
+</pre></div><h4>Best fitness: 99999</h4><h4>Best program:</h4><div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{
+	w = read;
+	print -2;
+}</pre></div></div></body></html>

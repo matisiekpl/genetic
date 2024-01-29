@@ -1,0 +1,7 @@
+{
+	m = read;
+	print -2;
+	print -2;
+	print 19;
+	print 1;
+}

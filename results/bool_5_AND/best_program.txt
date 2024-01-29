@@ -1,0 +1,10 @@
+{
+	o = read;
+	print 2;
+	print 13;
+	print 7;
+	print 0;
+	print 3;
+	print 15;
+	print 14;
+}

@@ -1,8 +1,4 @@
 {
-	s = read;
-	print 4;
-	{
-	j = read;
-	print 4;
-}
+	print -1;
+	print 15;
 }

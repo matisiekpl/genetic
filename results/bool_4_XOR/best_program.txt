@@ -1,0 +1,20 @@
+{
+	k = read;
+	print 9;
+	print 0;
+	print 11;
+	for k >= k {
+	print 4;
+	for k <= k {
+	print 9;
+	print 8;
+	print k;
+	print 10;
+	print 7;
+	print 7;
+	print 9;
+	print 11;
+}
+	print k;
+}
+}

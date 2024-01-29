@@ -1,5 +1,10 @@
 {
-	c = read;
-	print 11;
-	print 8;
+	q = read;
+	print -1;
+	9
+	print 20;
+	print 3;
+	print 5;
+	print 6;
+	print 16;
 }

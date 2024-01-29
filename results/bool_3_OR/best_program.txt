@@ -1,0 +1,10 @@
+{
+	h = read;
+	h = h + h;
+	print h;
+	h = h + h;
+	print 0;
+	print h;
+	i = read;
+	a = read;
+}

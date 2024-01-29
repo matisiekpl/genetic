@@ -1,9 +1,8 @@
 {
-	r = read;
-	print 15;
-	print 0;
-	print 8;
-	print 15;
-	print print p;;
-	print r;
+	o = read;
+	print 10;
+	print 4;
+	b = read;
+	print b;
+	if o >= o print 11;
 }

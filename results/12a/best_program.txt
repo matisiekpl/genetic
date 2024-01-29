@@ -1,5 +1,7 @@
 {
-	u = read;
-	print 2;
-	print 15;
+	v = read;
+	print d;
+	print 3;
+	print 20;
+	c = read;
 }

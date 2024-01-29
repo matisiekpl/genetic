@@ -1,97 +1,78 @@
 {
-	m = read;
-	if m >= m {
-	print 11;
-	for m == m {
-	print 16;
-	print -1;
-	print 20;
-	print m;
-	6 = m - m;
-}
-	if m < m {
-	print m;
-	if m == m {
-	print 10;
-	print 14;
-	print 20;
-	print m;
-}
-	print 19;
-	print 5;
-	print 1;
-	print 4;
-	print 9;
-	p = read;
-	print 6;
-	print 17;
-}
-	print 6;
-}
-	print 7;
-	if p >= m {
-	for p < p {
-	m = p / m;
-	print 1;
-	z = read;
-	s = read;
-	print -1;
-	if z > s {
-	print 18;
-	b = read;
-	print 1;
-	print z;
-	print 16;
-	print 5;
-	print 10;
-	print 5;
-}
-	print 18;
-	c = read;
-	print 13;
-	print 19;
-}
-	print -1;
-	o = read;
-	for c < b {
-	print 3;
 	r = read;
-	print 15;
-	print 1;
-	print 2;
-	print 10;
-	print 18;
-	e = read;
-	print 12;
-	print 20;
-}
-	print 20;
-	print 15;
-	print 4;
+	for r <= r {
+	z = read;
 	for z <= z {
-	for o < b {
-	print 10;
-	print 15;
-	print z;
-	print 7;
-	print 13;
-}
-	print 3;
-	print r;
-	if e > r {
-	print 0;
-	print 1;
 	print 4;
-	print 3;
-	print 11;
-}
+	if z == z {
+	print z;
+	print 16;
+	print 6;
+	print 4;
+	x = read;
+	print -2;
 	print 12;
 }
-	print 16;
-	print 17;
 }
-	print 0;
-	d = read;
+	for z <= z {
+	print 9;
+	for z <= x {
+	print 14;
+	w = read;
+	print 18;
+	print 8;
+	print 19;
+	q = read;
 	print 10;
+	w = x + z;
+	19
+	print 6;
+}
+	print 10;
+	for w != x {
+	print 17;
+	print 15;
+	r = x / r;
+}
+	if x < x {
+	print 13;
 	print 20;
+}
+	print 12;
+	print 10;
+	print 4;
+}
+	j = read;
+	print 4;
+}
+	print 8;
+	print 1;
+	print 10;
+	if r <= r {
+	w = z - j;
+	print 14;
+	print 8;
+	if w > z {
+	w = j - x;
+	for q == x {
+	print 15;
+	print 5;
+	print 12;
+	print z;
+	print 14;
+	v = read;
+	print 19;
+	print 9;
+	print 4;
+}
+}
+	print 4;
+	print q;
+	o = read;
+	print 11;
+	print 16;
+}
+	print v;
+	print 18;
+	print 9;
 }

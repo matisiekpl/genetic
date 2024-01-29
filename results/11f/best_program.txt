@@ -1,6 +1,4 @@
 {
-	p = read;
-	print 5;
-	k = read;
-	print 17;
+	l = read;
+	print 1;
 }

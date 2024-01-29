@@ -1,0 +1,7 @@
+{
+	q = read;
+	print 4;
+	d = read;
+	print 12;
+	d = q - d;
+}

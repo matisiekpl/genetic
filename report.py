@@ -1,4 +1,3 @@
-# list directories in results
 import os
 
 html = '<html><head><title>Report</title><script src="https://cdn.tailwindcss.com"></script><meta charset="utf-8"></head><body>'
