@@ -33,6 +33,8 @@ for test in sorted(tests):
     best_fitness = open(f'results/{test}/best_fitness.txt').read()
     best_program = open(f'results/{test}/best_program.txt').read()
     fitness_function = open(f'results/{test}/fitness_function.py').read()
+    if best_fitness == '0.0':
+        best_fitness = '9999'
     if best_fitness == '0':
         html += '<h4 class="text-green-500">Problem solved!</h4>'
     else:

@@ -1,5 +1,0 @@
-{
-	k = read;
-	print 4;
-	print 13;
-}

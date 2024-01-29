@@ -1,4 +1,0 @@
-{
-	g = read;
-	print 1;
-}

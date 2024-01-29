@@ -35,8 +35,9 @@ class Individual:
         if fit == 0:
             if not os.path.exists(f'results/{self.label}'):
                 os.makedirs(f'results/{self.label}')
-            with open(f'results/{self.label}/best_program.txt', 'w') as f:
-                f.write(str(self.program))
+            if interpreter.check(self.program):
+                with open(f'results/{self.label}/best_program.txt', 'w') as f:
+                    f.write(str(self.program))
         self.fit = fit
         return self.fit
 
