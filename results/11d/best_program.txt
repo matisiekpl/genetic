@@ -1,28 +1,5 @@
 {
-	g = read;
-	print {
-	j = read;
-	print 3;
+	v = read;
 	print 1;
-	for j > j {
-	print 0;
-	print 15;
-	j = j + j;
-	print 19;
-	print 17;
-	print 18;
-	print 1;
-}
-	print 17;
-	print 19;
-	for j != j {
-	print 4;
-	print 9;
-}
-	print 15;
-	print 10;
-};
-	a = read;
-	print 13;
-	a = g / a;
+	print -1;
 }

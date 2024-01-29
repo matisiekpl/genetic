@@ -1,7 +1,4 @@
 {
-	v = read;
-	print d;
-	print 3;
-	print 20;
-	c = read;
+	print 13;
+	print 13;
 }

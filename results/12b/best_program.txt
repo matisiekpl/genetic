@@ -1,4 +1,4 @@
 {
-	n = read;
-	print 3;
+	print 16;
+	print print 16;;
 }

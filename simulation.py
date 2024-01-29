@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import generator
 import interpreter
 
-POP = 10
-GEN = 2
+POP = 1000
+GEN = 50
 
 
 def run(program, input_array):

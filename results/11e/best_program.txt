@@ -1,78 +1,17 @@
 {
-	r = read;
-	for r <= r {
-	z = read;
-	for z <= z {
-	print 4;
-	if z == z {
-	print z;
-	print 16;
-	print 6;
-	print 4;
-	x = read;
-	print -2;
-	print 12;
-}
-}
-	for z <= z {
-	print 9;
-	for z <= x {
-	print 14;
-	w = read;
-	print 18;
-	print 8;
-	print 19;
-	q = read;
-	print 10;
-	w = x + z;
-	19
-	print 6;
-}
-	print 10;
-	for w != x {
-	print 17;
-	print 15;
-	r = x / r;
-}
-	if x < x {
-	print 13;
-	print 20;
-}
-	print 12;
-	print 10;
-	print 4;
-}
-	j = read;
-	print 4;
-}
-	print 8;
-	print 1;
-	print 10;
-	if r <= r {
-	w = z - j;
-	print 14;
-	print 8;
-	if w > z {
-	w = j - x;
-	for q == x {
-	print 15;
-	print 5;
-	print 12;
-	print z;
-	print 14;
 	v = read;
-	print 19;
-	print 9;
-	print 4;
+	for v >= v {
+	print v = read;;
+	for v < v {
+	print 0;
+	print v;
+	print 2;
+	print 2;
+	print 12;
 }
-}
-	print 4;
-	print q;
-	o = read;
-	print 11;
+	print 16;
 	print 16;
 }
-	print v;
-	print 18;
-	print 9;
+	print 7;
+	v = v + v;
 }

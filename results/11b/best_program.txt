@@ -1,8 +1,17 @@
 {
-	o = read;
-	print 10;
-	print 4;
-	b = read;
-	print b;
-	if o >= o print 11;
+	p = read;
+	for p == p {
+	print 20;
+	print -2;
+	print p;
+	print 13;
+	print 14;
+	print 3;
+	print 3;
+	p = p * p;
+	print -1;
+	print 18;
+}
+	print 3;
+	print p;
 }

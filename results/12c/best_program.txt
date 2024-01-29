@@ -1,5 +1,3 @@
 {
-	l = read;
-	print 15;
-	print 6;
+	print 5;
 }

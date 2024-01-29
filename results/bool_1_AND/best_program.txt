@@ -1,5 +1,4 @@
 {
-	r = read;
-	print 8;
-	print -1;
+	z = read;
+	print 0;
 }

@@ -1,7 +1,28 @@
 {
-	print 6;
-	print -2;
+	l = read;
 	print 17;
-	print e;
-	print 10;
+	for l <= l {
+	print 6;
+	print 7;
+	print 13;
+	print -2;
+	y = read;
+	print l;
+	print y;
+	print 13;
+	print 17;
+	l = y + l;
+}
+	print 2;
+	print l;
+	print 3;
+	for l < l {
+	print 17;
+	e = read;
+	print 6;
+	print y;
+	o = read;
+	print -1;
+	p = read;
+}
 }

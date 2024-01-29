@@ -166,15 +166,16 @@ valid = True
 
 
 class CheckErrorListener(ErrorListener):
+
     def syntaxError(self, recognizer, offending_symbol, line, column, msg, e):
         global valid
         valid = False
 
 
 def check(program):
+    global valid
     program = program[1:]
     program = program[:-1]
-    global valid
     valid = True
     error_listener = CheckErrorListener()
     input_stream = InputStream(program)
@@ -185,10 +186,11 @@ def check(program):
     parser = gramatykaParser(token_stream)
     parser.removeErrorListeners()
     parser.addErrorListener(error_listener)
-    if not valid:
-        return False
     try:
         parser.main()
+        print(valid)
+        if not valid:
+            return False
         return True
     except Exception as e:
         return False
