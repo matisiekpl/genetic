@@ -1,0 +1,21 @@
+{
+	p = read;
+	print 7;
+	print 3;
+	print 6;
+	print p;
+	print p;
+	p = p / p;
+	print {
+	v = read;
+	l = read;
+	print 10;
+	print 17;
+	print 11;
+	print v;
+	print 13;
+	print 15;
+};
+	print 20;
+	print 19;
+}

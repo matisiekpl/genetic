@@ -1,0 +1,5 @@
+{
+	y = read;
+	print 17;
+	print -1;
+}

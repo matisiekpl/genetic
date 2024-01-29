@@ -1,48 +1,5 @@
 {
-	c = read;
-	if c != c {
-	for c != c {
-	c = c - c;
-	print 15;
-	for c > c {
-	print 4;
-	print 10;
-	print {
-	r = read;
-	print 14;
-};
-}
-	print c;
+	x = read;
+	f = read;
 	print 20;
-	print 13;
-	print c;
-	print 19;
-}
-	print 6;
-	print c;
-	print 10;
-	print -1;
-	print 11;
-	print 0;
-	print 19;
-	for c != c {
-	print 6;
-	for c < c {
-	print 13;
-	print -1;
-	print 12;
-	l = read;
-}
-	print 3;
-	print 16;
-	print 12;
-	print 10;
-	print c;
-	print 4;
-	print 0;
-	print 9;
-}
-	print 16;
-}
-	print 9;
 }

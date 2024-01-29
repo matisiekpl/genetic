@@ -1,0 +1,11 @@
+{
+	a = read;
+	print 16;
+	print 19;
+	print 8;
+	print 3;
+	print 0;
+	print 3;
+	print 17;
+	print 1;
+}

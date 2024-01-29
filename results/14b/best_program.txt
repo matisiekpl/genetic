@@ -1,0 +1,8 @@
+{
+	s = read;
+	print 4;
+	{
+	j = read;
+	print 4;
+}
+}

@@ -1,0 +1,5 @@
+{
+	i = read;
+	print 9;
+	print 12;
+}

@@ -2,6 +2,8 @@ import os
 
 import numpy as np
 from antlr4 import *
+from antlr4.error.ErrorListener import ErrorListener
+
 from gramatykaLexer import gramatykaLexer
 from gramatykaParser import gramatykaParser
 import sys
@@ -160,13 +162,31 @@ class GeneticProgramInterpreter(ParseTreeListener):
             self.enterMain(ctx.main())
 
 
+valid = True
+
+
+class CheckErrorListener(ErrorListener):
+    def syntaxError(self, recognizer, offending_symbol, line, column, msg, e):
+        global valid
+        valid = False
+
+
 def check(program):
+    program = program[1:]
+    program = program[:-1]
+    global valid
+    valid = True
+    error_listener = CheckErrorListener()
     input_stream = InputStream(program)
     lexer = gramatykaLexer(input_stream)
     lexer.removeErrorListeners()
+    lexer.addErrorListener(error_listener)
     token_stream = CommonTokenStream(lexer)
     parser = gramatykaParser(token_stream)
     parser.removeErrorListeners()
+    parser.addErrorListener(error_listener)
+    if not valid:
+        return False
     try:
         parser.main()
         return True
