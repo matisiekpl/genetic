@@ -22,15 +22,19 @@ for test in sorted(tests):
         continue
     if not os.path.exists(f'results/{test}/best_fitness.txt'):
         continue
-    if not os.path.exists(f'results/{test}/best_program.txt'):
-        continue
+    # if not os.path.exists(f'results/{test}/best_program.txt'):
+    #     continue
     if not os.path.exists(f'results/{test}/fitness_function.py'):
         continue
     print(test)
     html += '<div class="p-4 m-4 border border-gray-400 rounded-lg shadow-lg">'
     html += f'<h1 class="font-semibold text-lg">Test: {test}</h1>'
     best_fitness = open(f'results/{test}/best_fitness.txt').read()
-    best_program = open(f'results/{test}/best_program.txt').read()
+
+    if  os.path.exists(f'results/{test}/best_program.txt'):
+        best_program = open(f'results/{test}/best_program.txt').read()
+    else:
+        best_program = None
     fitness_function = open(f'results/{test}/fitness_function.py').read()
     if best_fitness == '0.0':
         best_fitness = '9999'
@@ -43,7 +47,8 @@ for test in sorted(tests):
     html += f'<div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{fitness_function}</pre></div>'
     html += f'<h4>Best fitness: {best_fitness}</h4>'
     html += f'<h4>Best program:</h4>'
-    html += f'<div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{best_program}</pre></div>'
+    if best_program is not None and best_fitness == '0':
+        html += f'<div class="mt-2 bg-gray-100 rounded-lg p-4"><pre>{best_program}</pre></div>'
 
     if os.path.exists(f'results/{test}/fitness.png'):
         html += f'<img src="results/{test}/fitness.png" alt="fitness" class="mt-4">'
