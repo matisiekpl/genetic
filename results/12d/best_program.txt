@@ -1,4 +1,4 @@
 {
-	z = read;
+	v = read;
 	print -1;
 }

@@ -1,19 +1,5 @@
 {
-	s = read;
-	d = read;
-	print -2;
-	if d != d {
-	print 18;
-	print 4;
-	print 4;
-	print 0;
-	print 2;
-	print 14;
-	print 16;
-	print 18;
-	print 13;
-}
+	h = read;
+	r = read;
 	print 1;
-	l = read;
-	print -2;
 }

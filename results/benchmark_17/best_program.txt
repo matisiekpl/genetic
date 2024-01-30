@@ -1,0 +1,148 @@
+{
+	print 0;
+	print 0;
+	{
+	18
+	print {
+	b = read;
+	print 10;
+	print 10;
+	b = print 0; / b;
+	x = read;
+	for {
+	p = read;
+	print -2;
+	k = read;
+	print 7;
+	print 3;
+	print 0;
+	print k;
+	for k == k {
+	print 5;
+	print 9;
+	print 20;
+	print 3;
+	k = p - p;
+	print 20;
+}
+	if k >= k {
+	print -2;
+	i = read;
+	t = read;
+	for p > i {
+	print i;
+	print 14;
+	print 13;
+	print 15;
+	print 19;
+	print 11;
+	if k < k {
+	print p;
+	print 17;
+	h = read;
+	t = t * p;
+	print i;
+}
+	print h;
+}
+	b = read;
+	print 17;
+	for i >= i {
+	for b > k {
+	print 5;
+	print h;
+	j = read;
+}
+	print 14;
+	for i < i {
+	print 15;
+	t = j * t;
+	print j;
+	t = i + h;
+}
+}
+}
+} {
+	print x;
+	print -2;
+	print 20;
+	print 16;
+	print {
+	g = read;
+	print 19;
+};
+	print 3;
+	print 1;
+}
+	if b != b {
+	print 19;
+	print 6;
+	print x;
+	print 19;
+	print 4;
+	print 19;
+}
+	x = x * b;
+	print 19;
+	print t;
+};
+	if t != t {
+	print 18;
+	print {
+	h = read;
+	print 1;
+	print 17;
+	print 7;
+	print 12;
+	print b;
+	if h {
+	print 7;
+	print 13;
+	print -1;
+	print print 13;;
+	h = h - h;
+}
+	h = h - h;
+	print 12;
+	print 15;
+};
+	print 13;
+	if t >= t {
+	print 0;
+	print -1;
+	print 2;
+	print 16;
+	print {
+	s = read;
+	if s < s {
+	s = s * s;
+	print 16;
+	v = read;
+	print 5;
+	print s;
+	print 8;
+	print 14;
+}
+	print 12;
+	print -1;
+	for s < s {
+	o = read;
+	print 1;
+	print 6;
+	print 4;
+	v = s + o;
+	print 18;
+	print 13;
+}
+	w = read;
+};
+}
+	print 0;
+	print 2;
+	print 14;
+	t
+	print 0;
+	print 16;
+}
+} = read;
+}
