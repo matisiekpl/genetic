@@ -119,8 +119,8 @@ def random_tree(depth=5, choices=None):
             available_choices = ['read']
             if len(used_variables) > 0:
                 available_choices.append('assignment')
-                for _ in range(10):
-                    available_choices.append('print')
+                # for _ in range(10):
+                #     available_choices.append('print')
             if depth > 0 and len(used_variables) > 0:
                 available_choices.append('if')
                 available_choices.append('for')
